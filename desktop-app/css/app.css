@@ -57,9 +57,10 @@ html, body, body > div.ng-scope {
 /* Partials - menu */
 
 .menu {
+    margin-bottom: 30px;
     display: table;
     table-layout: fixed;
-    border-width: 2px 0px 2px 0px;
+    border-width: 0 0px 2px 0px;
     border-style: solid;
     border-color: #DB6151;
     width: 100%;
@@ -267,7 +268,7 @@ html, body, body > div.ng-scope {
     padding: 15px;
     font-family: 'Playfair Display', serif;
     display: block;
-    font-size:15px;
+    font-size:18px;
     color: #fff;
     font-weight: 500;
 }

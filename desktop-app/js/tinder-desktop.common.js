@@ -42,6 +42,7 @@
       for (var i = 0; i < str.length; i++) {
          hash = str.charCodeAt(i) + ((hash << 5) - hash);
       }
+      hash = Math.abs(hash);
 
       var pn = (data.gender == '0' ? 'he' : 'she');
       var ps = (data.gender == '0' ? 'his' : 'her');
@@ -57,12 +58,12 @@
         pn + " loads the dishwasher wrong",
         pn + " doesn't vote",
         "" + pn + "'s grossed out when you talk about poop",
-        pn + " shook your hand and then told you " + pn + " was sick",
+        pn + " shakes your hand and then told you " + pn + " was sick",
         pn + " texts on the subway stairs",
-        pn + " gave you long stem red roses",
+        pn + " gives you long stem red roses and purple poetry",
         pn + " drinks iced coffee in below freezing temperatures",
-        pn + " wore voluminous hats to concerts",
-        "you've never seen " + po + " without a hat on",
+        pn + " wears voluminous hats to concerts",
+        po + " gets a really stupid hat and never takes it off",
         pn + " attends SantaCON every year",
         "" + ps + " mom still buys all " + ps + " clothes for " + po + "",
         pn + " thinks Nickelback is underappreciated",
@@ -70,24 +71,23 @@
         pn + " lied about having a dog on tinder",
         pn + " sleeps on your side of the bed. It's yours!",
         pn + " acts like " + pn + "'s your teacher",
-        pn + " expects you to convert to " + ps + " religion in the future",
         pn + " voted for Trump",
         pn + " says 'all lives matter'",
-        "You're convinced " + pn + " forgets your name",
+        "You're convinced " + pn + " gave you a pet name because " + pn + " forgot your actual name",
         pn + " acts like " + pn + "'s from New Jersey",
-        pn + " gave you a pet name you hate",
+        pn + " gives you a pet name you hate",
         "" + pn + "'s a fan of sister wives",
-        pn + " likes Woody Allen to an uncomfortable degree",
+        pn + " admires Woody Allen to an uncomfortable degree",
         pn + " watches exclusively reality TV shows",
-        pn + " doesn't read books",
+        pn + " hasn't read a book since high school",
         pn + " tattoos your name to " + ps + " body after a few dates",
         "" + pn + "'s toxic and you're not slipping under",
         pn + " doesn't believe in the moon landing",
         pn + " never lets you choose the movie",
-        "You're pretty sure that tiger in " + ps + " photo was drugged",
+        "You're pretty sure that tiger in " + ps + " profile photo was drugged",
         pn + " wears exclusively v-necks",
         pn + " never wants to hang out with your friends",
-        "you made more money than " + po + " and " + pn + " couldn't handle it",
+        "you make more money than " + po + " and " + pn + " couldn't handle it",
         "Unable to commit... even when choosing an ice cream flavour",
         "you can't stand " + ps + " fashion sense",
         pn + " litters",
@@ -110,6 +110,8 @@
       var x = Math.sin(hash + 1) * 10000;
       var random = x - Math.floor(x);
       var result = Math.floor(random*reasons.length);
+
+      result = hash % reasons.length;
 
       return reasons[result];
     };
