@@ -1,11 +1,13 @@
 /* General styles */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
-* {
-    font-family: 'Raleway', Arial;
+*, html, p {
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Raleway', Arial;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 a {
@@ -229,25 +231,51 @@ html, body, body > div.ng-scope {
 
 .name {
     text-align: center;
+    color: #5a5a5a;
 }
 
 .status {
     text-align: center;
+    color: #c0c0c0;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .schoolwork {
     display: block;
     text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #c0c0c0;
 }
 
 .school, .work {
     display: block;
-    margin-top: 4px;
+    font-variant: normal;
 }
 
 .bio {
     text-align: center;
     white-space: pre-wrap;
+    color: #c0c0c0;
+}
+
+.fortune {
+    text-align: center;
+    white-space: pre-wrap;
+    background-color: #DB6151;
+    padding: 15px;
+    font-family: 'Playfair Display', serif;
+    display: block;
+    font-size:15px;
+    color: #fff;
+    font-weight: 500;
+}
+.fortune .secret {
+/*    display: none;
+*/}
+.fortune:hover .secret {
+    display: inline-block;
 }
 
 .bio.edit {

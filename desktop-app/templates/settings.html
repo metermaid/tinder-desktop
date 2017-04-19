@@ -46,6 +46,22 @@
     <br/>
 
     <fieldset>
+      <legend translate="SETTINGS.FORTUNE"></legend>
+      <label for="mystery_1">
+        <input type="radio" name="fortune" id="mystery_1" value="yes" ng-model="settings.fortunes" ng-change="syncSettings()"/>
+        {{'SETTINGS.FORTUNE_ON' | translate}}
+      </label>
+      <br/>
+      <label for="mystery_2">
+        <input type="radio" name="fortune" id="mystery_2" value="no" ng-model="settings.fortunes" ng-change="syncSettings()"/>
+        {{'SETTINGS.FORTUNE_OFF' | translate}}
+      </label>
+    </fieldset>
+
+
+    <br/>
+
+    <fieldset>
       <legend translate="SETTINGS.DISTANCE_UNITS"></legend>
       <label for="distanceUnits_1">
         <input type="radio" name="distanceUnits" id="distanceUnits_1" value="mi" ng-model="settings.distanceUnits" ng-change="syncSettings()"/>

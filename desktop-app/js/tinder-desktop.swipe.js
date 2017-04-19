@@ -1,10 +1,12 @@
 (function() {
   var superLike;
-  var module = angular.module('tinder-desktop.swipe', ['ngAutocomplete', 'ngSanitize', 'tinder-desktop.api', 'tinder-desktop.common']);
+  var module = angular.module('tinder-desktop.swipe', ['ngAutocomplete', 'tinder-desktop.settings', 'ngSanitize', 'tinder-desktop.api', 'tinder-desktop.common']);
 
-  module.controller('SwipeController', function SwipeController($scope, $timeout, $interval, $location, API) {
+  module.controller('SwipeController', function SwipeController($scope, Settings, $timeout, $interval, $location, API) {
     $scope.allPeople = [];
     $scope.peopleIndex = 0;
+    $scope.showFortunes = Settings.get('fortunes') === 'yes';
+
     $scope.apiQueue = [];
     var queueTimer = null;
 
